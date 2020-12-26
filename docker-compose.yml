@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo-volume:/data/db
+
+  message_api:
+    build: ./MailRepositoryService
+    restart: always
+    ports:
+      - 8080:80
+    depends_on:
+      - mongo
+
+  smtp_server:
+    build: ./smtp_server    
+    restart: always
+    ports:
+      - 11125:11125
+    depends_on:
+      - message_api
+
+volumes:
+  mongo-volume:
