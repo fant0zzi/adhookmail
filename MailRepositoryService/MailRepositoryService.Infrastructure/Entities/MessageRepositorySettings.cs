@@ -4,7 +4,6 @@
 
     public sealed class MessageRepositorySettings : IRepositorySettings
     {
-        public string RepositoryName { get; set; }
         public string ConnectionString { get; set; }
         public string DatabaseName { get; set; }
     }
