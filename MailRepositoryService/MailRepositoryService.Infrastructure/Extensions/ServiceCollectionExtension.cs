@@ -1,7 +1,7 @@
 ﻿namespace MailRepositoryService.Infrastructure.Extensions
 {
     using MailRepositoryService.Core.Interfaces;
-    using MailRepositoryService.Infrastructure.Services;
+    using MailRepositoryService.Infrastructure.Repositories;
     using Microsoft.Extensions.DependencyInjection;
 
     public static class ServiceCollectionExtension

@@ -1,4 +1,4 @@
-﻿namespace MailRepositoryService.Infrastructure.Services
+﻿namespace MailRepositoryService.Infrastructure.Repositories
 {
     using MailRepositoryService.Core.Interfaces;
     using MailRepositoryService.Infrastructure.Models;
