@@ -44,8 +44,6 @@ class SMTPServer:
 
     async def handle_DATA(self, protocol, session, envelope):
         envelope_hash = md5(envelope.content).hexdigest()
-        # async with async_open(f"/tmp/{envelope_hash}", 'w+') as afp:
-        #     await afp.write(envelope.content.decode("utf-8"))
         msg = message_from_bytes(envelope.original_content)
         message_id = msg['Message-ID'] or envelope_hash
         logging.info(f'Received a message: {message_id}')
