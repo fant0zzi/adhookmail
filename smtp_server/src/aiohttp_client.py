@@ -27,7 +27,7 @@ class AioHTTPClient:
                 try:
                     logging.info(f'{method} {url} {payload}')
                 except Exception as e:
-                    logging.info(f'Could not execute {method} request by {url} '
+                    logging.info(f'Could not execute {method} request by {url}'
                                  f'Exception: {e}')
 
     def execute(self, method: str,
